@@ -1,5 +1,5 @@
 .navigation {
-  display: flex;
+  display: grid;
   justify-content: center;
   list-style: none;
   padding: 0;
@@ -11,7 +11,7 @@
 
 .navigationItem {
   display: inline-flex;
-  align-items: center;
+  align-self: end;
   margin: 0 1em;
 }
 
