@@ -1,0 +1,9 @@
+.content {
+	padding: 5vmin 0;
+	padding-left: 1rem;
+}
+.articleList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

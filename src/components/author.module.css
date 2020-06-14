@@ -1,0 +1,11 @@
+.title {
+	font-size:1.125rem;
+	font-weight:600;
+	line-height:1.18rem;
+}
+.subtitle {
+	color: #888;
+}
+.photo {
+	border-radius:50%;
+}
