@@ -1,24 +1,17 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import base from './base.css'
-import Container from './container'
+import style from './layout.module.css'
 import Sidebar from './sidebar'
+import Content from './content'
 
 class Layout extends React.Component {
   render() {
-    const { location, author, children } = this.props
-    let header
-
-    let rootPath = `/`
-    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`
-    }
-
+    const { children } = this.props
     return (
-      <Container>
-        <Sidebar author={author} />
-        {children}
-      </Container>
+      <div className={style.layout}>
+        <Sidebar />
+	<Content children={children} />
+      </div>
     )
   }
 }

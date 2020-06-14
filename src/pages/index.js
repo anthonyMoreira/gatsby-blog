@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import contentStyle from '../components/content.module.css'
 
 class RootIndex extends React.Component {
   render() {
@@ -13,11 +14,10 @@ class RootIndex extends React.Component {
     const author = get(this, 'props.data.contentfulPerson')
 
     return (
-      <Layout location={this.props.location} author={author} >
-        <div style={{ background: '#fff' }}>
+      <Layout location={this.props.location} >
+        <div>
           <Helmet title={siteTitle} />
-          <div className="wrapper">
-            <ul className="article-list">
+       	     <ul className={contentStyle.articleList}>
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
@@ -26,7 +26,6 @@ class RootIndex extends React.Component {
                 )
               })}
             </ul>
-          </div>
         </div>
       </Layout>
     )
@@ -62,26 +61,5 @@ export const pageQuery = graphql`
         }
       }
     }
-  contentfulPerson {
-    email
-    github
-    twitter
-    linkedIn  
-    company
-    sidebarBio	  
-    shortBio {
-      childMarkdownRemark {
-        html
-      }
-    }
-    name
-    image {
-      id
-      fluid {
-        tracedSVG
-      }
-      description
-    }
-  }
   }
 `
