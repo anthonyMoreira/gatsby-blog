@@ -14,18 +14,18 @@ class RootIndex extends React.Component {
     const author = get(this, 'props.data.contentfulPerson')
 
     return (
-      <Layout location={this.props.location} >
+      <Layout location={this.props.location}>
         <div>
           <Helmet title={siteTitle} />
-       	     <ul className={contentStyle.articleList}>
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+          <ul className={contentStyle.articleList}>
+            {posts.map(({ node }) => {
+              return (
+                <li key={node.slug}>
+                  <ArticlePreview article={node} />
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </Layout>
     )
@@ -50,7 +50,7 @@ export const pageQuery = graphql`
           tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
           description {
