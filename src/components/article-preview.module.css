@@ -2,10 +2,11 @@
   font-size: 1.5em;
 }
 
-.tag {
-  color: #A0A0A0;
+.tag a {
+  color: #f7a046;
   text-decoration: none;
   display: inline-block;
   line-height: 1;
   margin-left: .5em;
+  background-image: none;
 }
