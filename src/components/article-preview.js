@@ -9,13 +9,14 @@ export default ({ article }) => (
     <h3 className={styles.previewTitle}>
       <Link to={`/blog/${article.slug}`}>{article.title}</Link>
     </h3>
-    <small>{article.publishDate}
-     {article.tags && article.tags.map(tag => (
-      <span className={styles.tag} key={tag}>
-	      #{tag}
-      </span>
-    ))}
-
+    <small>
+      {article.publishDate}
+      {article.tags &&
+        article.tags.map((tag) => (
+          <span className={styles.tag} key={tag}>
+            #{tag}
+          </span>
+        ))}
     </small>
     <p
       dangerouslySetInnerHTML={{

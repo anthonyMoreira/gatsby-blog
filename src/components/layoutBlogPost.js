@@ -5,10 +5,14 @@ import Content from './content'
 class LayoutBlogPost extends React.Component {
   render() {
     const { location, children } = this.props
-	  return (<div className={style.layout}>
-		  	<Link to="/" className={style.homeButton}> All Articles</Link>
-			<Content children={children}/>
-	  	   </div>
+    return (
+      <div className={style.layout}>
+        <Link to="/" className={style.homeButton}>
+          {' '}
+          All Articles
+        </Link>
+        <Content children={children} />
+      </div>
     )
   }
 }
