@@ -45,7 +45,14 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/images/icon.jpg`
+        icon: `src/images/icon.jpg`,
+        cache_busting_mode: 'none'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about`, `/blog/*`],
       },
     },
   ],
