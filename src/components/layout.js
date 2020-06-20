@@ -10,7 +10,7 @@ class Layout extends React.Component {
     return (
       <div className={style.layout}>
         <Sidebar />
-	<Content children={children} />
+        <Content children={children} />
       </div>
     )
   }
