@@ -12,7 +12,7 @@ export default ({ article }) => (
     <small>{article.publishDate}
      {article.tags && article.tags.map(tag => (
       <span className={styles.tag} key={tag}>
-	      #{tag}
+	      <Link to={`/tags/${tag}`}>#{tag} </Link>
       </span>
     ))}
 
