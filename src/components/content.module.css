@@ -1,6 +1,7 @@
 .content {
 	padding: 5vmin 0;
-	padding-left: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .articleList {
   margin: 0;
