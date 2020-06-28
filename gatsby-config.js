@@ -16,6 +16,10 @@ if (!spaceId || !accessToken) {
   )
 }
 
+if (!process.env.GATSBY_REMARK42_URL) {
+  throw new Error('Remark42 url is mandatory for comment support')
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Anthony Moreira Blog',

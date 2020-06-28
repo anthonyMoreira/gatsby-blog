@@ -17,7 +17,7 @@ const removeScript = (id, parentElement) => {
 }
 
 const remark_config = {
-  host: `${process.env.REMARK42_URL}`, // hostname of remark server, same as REMARK_URL in backend config, e.g. "https://demo.remark42.com"
+  host: `${process.env.GATSBY_REMARK42_URL}`, // hostname of remark server, same as REMARK_URL in backend config, e.g. "https://demo.remark42.com"
   site_id: 'blog',
   components: ['embed'], // optional param; which components to load. default to ["embed"]
   // to load all components define components as ['embed', 'last-comments', 'counter']
