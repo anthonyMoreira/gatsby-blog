@@ -11,6 +11,7 @@ export const useAuthor = () => {
           company
           copyright
           sidebarBio
+          codewars
           shortBio {
             childMarkdownRemark {
               html
